@@ -1,0 +1,14 @@
+Per scaricare la repository usare il comando:
+git clone https://github.com/vabo2790/SAW
+
+Per configurare il proprio account nella git bash usare questi 2 comandi:
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+Per aggiungere files alla repository bisogna prima metterli nella cartella della repository su pc, poi bisogna eseguire i seguenti comandi:
+git add *						//Aggiunge tutti i files contenuti nella cartella corrente e nelle sottocartelle
+git commit -m "Inserisci qui il messaggio"		//Esegue il commit ed aggiunge un messaggio
+git push						//Manda i dati alla repository
+
+Per scaricare cu pc gli aggiornamenti della repository, cioè per scaricare files nuovi e aggiornare quelli già presenti, bisogna usare:
+git pull
