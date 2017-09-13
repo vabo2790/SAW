@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="home.css"/>
+        <script src="home.js"></script>
+        <title>Sito SAW</title>
+    </head>
+    <body>
+        <img src="img/segn_verticale.png" style="widht:50px;height:60px"/img>
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="CERCA IL TUO SENTIERO">
+            </div>
+            <span id="profilepict">
+                <img src="img/profile-icon.png" style="widht: 40px;height:43px"/img>
+            </span>
+            <span id="login">
+                <img src="img/login-register.png" style="widht:80px;height:43px"/img>
+            </span>
+        <div class="btn-group btn-group-justified" style="top: 20px">
+            <a href="file:///C:/Users/Utente/Desktop/progetto%20saw/index.html" class="btn btn-danger">HOME</a>
+            <a href="#" class="btn btn-danger">CATEGORIE</a>
+            <a href="#" class="btn btn-danger">INSERZIONE</a>
+            <a href="#" class="btn btn-danger">PROFILO</a>
+        </div>
+        <form id="ins_dist1">
+            <h1 id="ins_font1"><b>NOME DEL SENTIERO</b></h1>
+            <input type="text" name="nome" value="boh">
+        </form>
+        <form class="ins_dist2">
+            <h2 class="ins_font2"><b>CITT&Agrave; PROVINCIA REGIONE</b></h2>
+            <input type="text" name="città" value="Arenzano">
+            <input type="text" name="provincia" value="Genova">
+            <input type="text" name="regione" value="Liguria">
+        </form>
+        <form class="ins_dist2">
+            <h3 class="ins_font2"><b>STATO SENTIERO</b></h3>
+            <select name="stato">
+                <option value="AGIBILE">AGIBILE</option>
+                <option value="INAGIBILE">INAGIBILE</option>
+            </select>
+        </form>
+            <form class="ins_dist2">
+                <h4 class="ins_font2"><b>DIFFICOLT&Agrave; SENTIERO</b></h4>
+                <select name="difficoltà">
+                    <option value="FACILE">FACILE</option>
+                    <option value="MEDIA">MEDIA</option>
+                    <option value="DIFFICILE">DIFFICILE</option>
+                </select>
+            </form>
+        <form class="ins_dist2">
+            <h4 class="ins_font2"><b>BREVE DESCRIZIONE</b></h4>
+            <textarea name="message" rows="7" cols="60">&Egrave; proprio un bel sentiero</textarea>
+        </form>
+        <form id="posta">
+            <input type="submit" value="POSTA">
+        </form>
+    </body>
+</html>

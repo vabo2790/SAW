@@ -1,0 +1,72 @@
+#searchbar{
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    widht: 700px;
+    box-sizing:border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    background-color: white;
+    background-image: url('img/search-icon.png');
+    background-position: 420px 8px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    padding: 12px 160px 10px;
+}
+#ape{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+}
+#profilepict{
+    position: absolute;
+    top: 20px;
+    left: 980px;
+}
+#login{
+    position: absolute;
+    top: 20px;
+    left: 1020px;
+}
+.img{
+    padding-left: 50px;
+    padding-top: 25px;
+}
+#ins_dist1{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.ins_dist2{
+    margin-left: 20px;
+}
+#ins_font1{
+    color: red;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.ins_font2{
+    color: red;
+    margin-right: 20px;
+    font-size: 18px;
+}
+#posta{
+    margin-left: 48%;
+}
+.search {
+  width: 100%;
+  position: relative
+}
+.searchTerm {
+    position: absolute;
+    top: -42px;
+    left: 32%;
+    width: 30%;
+    border: 3px solid red;
+    padding: 5px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+}
