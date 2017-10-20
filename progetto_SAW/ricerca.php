@@ -1,7 +1,12 @@
 <?php
     require_once 'base.php';
 ?>
-
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="home.css"/>
+    </head>
+    <body>
 <?php
   $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
   if (mysqli_connect_errno())
@@ -42,13 +47,24 @@
       echo "<h3>La ricerca ha prodotto ".$query1->num_rows()." risultati</h3>";
   }
 
-
-  // Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
+<?php
+    if($fotoS!=NULL)
+    {
+        $imgS=fopen("/img2","w");
+        fwrite("$imgS","$fotoS")
+    }
+  //Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
+  <?php
   while ($query1->fetch()){
-
-  //  <img src=".$fotoS" style="width:width;height:height;">
-
+    //<div>
+        //<div class="ricerca_foto">
+            echo '<img src=""class="ricerca_foto"';
+            echo '<h1>'.$nomeS.'<h1>';
+            echo '$cittaS $provinciaS $regioneS';
+        //</div>
+    //</div>   
   }
 
-
 ?>
+    </body>    
+</html>

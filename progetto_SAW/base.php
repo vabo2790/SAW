@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
     <head>
         <!--prima riga ci deve essere-->

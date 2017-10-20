@@ -26,7 +26,7 @@
     $cittaU = stripslashes($cittaU);
     $sessoU = stripslashes($sessoU);
     $fotoU = stripslashes($fotoU);
-    echo "Nome: $nomeU, Cognome: $cognomeU"
+    
 ?>
 
 <!DOCTYPE html>
