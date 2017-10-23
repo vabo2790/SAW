@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <!DOCTYPE>
+=======
+<?php session_start(); ?>
+<!DOCTYPE html>
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 <html>
     <head>
         <!--prima riga ci deve essere-->
@@ -19,12 +24,29 @@
                           <input type="text" class="searchTerm" placeholder="CERCA" name="cerca" id="cerca">
                       </form>
                     </div>
+<<<<<<< HEAD
             <span id="profilepict">
                 <img src="img/profile-icon.png" style="widht:40px;height:43px"/>
             </span>
             <span id="login">
                 <a href="registrati.php"><img src="img/registrati.png" style="widht:80px;height:43px"/></a>
             </span>
+=======
+                  <?php
+                  if($_SESSION["log"] == 1){
+                  echo  '<span id="login">
+                      <a href="esci.php"><img src="img/esci.png" style="widht:80px;height:43px"/></a>
+                    </span>';
+                  }else {
+                    echo '<span id="register">
+                      <a href="registrati.php"><img src="img/registrati.png" style="widht:80px;height:43px"/></a>
+                    </span>
+                    <span id="login">
+                      <a href="accedi.php"><img src="img/accedi.png" style="widht:80px;height:43px"/></a>
+                    </span>';
+                  }
+                  ?>
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
         <div class="btn-group btn-group-justified" style="top:20px">
             <a href="home.php" class="btn btn-danger">HOME</a>
             <a href="inserzione.php" class="btn btn-danger">NUOVO SENTIERO</a>

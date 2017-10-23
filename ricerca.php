@@ -1,12 +1,16 @@
 <?php
     require_once 'base.php';
 ?>
+<<<<<<< HEAD
 <!DOCTYPE>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="home.css"/>
     </head>
     <body>
+=======
+
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 <?php
   $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
   if (mysqli_connect_errno())
@@ -46,6 +50,7 @@
   else{
       echo "<h3>La ricerca ha prodotto ".$query1->num_rows()." risultati</h3>";
   }
+<<<<<<< HEAD
      
   //Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
         
@@ -69,3 +74,16 @@
 ?>
     </body>    
 </html>
+=======
+
+
+  // Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
+  while ($query1->fetch()){
+
+  //  <img src=".$fotoS" style="width:width;height:height;">
+
+  }
+
+
+?>
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec

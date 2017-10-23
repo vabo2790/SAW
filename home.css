@@ -24,6 +24,14 @@
     position: absolute;
     top: 20px;
     left: 980px;
+<<<<<<< HEAD
+=======
+}
+#register{
+    position: absolute;
+    top: 20px;
+    left: 990px;
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 }
 .img{
     padding-left: 50px;

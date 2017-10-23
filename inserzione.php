@@ -6,6 +6,12 @@
     <body>
         <form class="ins_dist2" action="inserisci_sent.php" method="post">
 
+<<<<<<< HEAD
+=======
+            <h1 class="ins_font1"><b>USERNAME*</b></h1>
+            <input type="text" name="username" id="username" >
+
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
             <h1 class="ins_font1"><b>NOME DEL SENTIERO*</b></h1>
             <input type="text" name="nome" id="nome" >
 
@@ -18,6 +24,18 @@
             <h1 class="ins_font2"><b>REGIONE*</b></h1>
             <input type="text" name="regione" id="regione">
 
+<<<<<<< HEAD
+=======
+            <h1 class="ins_font2"><b>LATITUDINE</b></h1>
+            <input type="text" name="lat" id="lat">
+
+            <h1 class="ins_font2"><b>LONGITUDINE</b></h1>
+            <input type="text" name="long" id="long">
+
+            <h1 class="ins_font2"><b>INDIRIZZO</b></h1>
+            <input type="text" name="indirizzo" id="indirizzo">
+
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
             <h1 class="ins_font2"><b>STATO SENTIERO*</b></h1>
             <select name="stato_sentiero" id="stato_sentiero">
                 <option value="AGIBILE">AGIBILE</option>

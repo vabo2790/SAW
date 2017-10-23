@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 <?php
+=======
+
+<?php
+  require_once 'base.php';
+
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
   $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
   if (mysqli_connect_errno())
     {

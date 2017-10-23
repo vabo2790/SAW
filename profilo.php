@@ -18,6 +18,7 @@
     // Dico alla query dove mettere i risultati
     $query4->bind_result($mailU, $passwordU, $nomeU, $cognomeU, $usernameU, $cittaU, $sessoU, $fotoU);
     // Pulisco le variabili da caratteri strani
+<<<<<<< HEAD
     $mailU = stripslashes($mailU);
     $passwordU = stripslashes($passwordU);
     $nomeU = stripslashes($nomeU);
@@ -27,6 +28,13 @@
     $sessoU = stripslashes($sessoU);
     $fotoU = stripslashes($fotoU);
     
+=======
+    $cittaU = stripslashes($cittaU);
+    $passwordU = stripslashes($passwordU);
+    $nomeU = stripslashes($nomeU);
+    $mailU = stripslashes($mailU);
+
+>>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 ?>
 
 <!DOCTYPE html>
