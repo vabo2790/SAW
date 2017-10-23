@@ -23,7 +23,12 @@
 #login{
     position: absolute;
     top: 20px;
-    left: 1020px;
+    left: 980px;
+}
+#register{
+    position: absolute;
+    top: 20px;
+    left: 990px;
 }
 .img{
     padding-left: 50px;
@@ -34,6 +39,7 @@
     margin-left: 20px;
 }
 .ins_dist2{
+    top: 50px;
     margin-left: 20px;
 }
 .ins_font1{
@@ -43,6 +49,7 @@
 }
 .ins_font2{
     color: red;
+    margin-top: 50px;
     margin-right: 20px;
     font-size: 18px;
 }
