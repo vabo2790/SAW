@@ -17,6 +17,9 @@
       echo '<h3> mail:'.$mailU.'</h3>';
       echo '<h3> nome:'.$nomeU.'</h3>';
       echo '<h3> cognome:'.$cognomeU.'</h3>';
+      echo '<form class="imgSent" action="modifica.php" method="post">
+              <input type="submit" name="modifica" id="modifica" value="Modifica">
+            </form>';
     }
 
     else{

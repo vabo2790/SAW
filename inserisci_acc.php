@@ -20,7 +20,6 @@
   $query5->bind_result($mailU, $passwordU, $nomeU, $cognomeU, $usernameU, $cittaU, $sessoU, $fotoU);
   // Pulisco le variabili da caratteri strani
   $usernameU = stripslashes($usernameU);
-  $passwordU = stripslashes($passwordU);
 
   if($query5->num_rows()==0){
       require_once 'base.php';

@@ -25,11 +25,19 @@
   $mailU=NULL;
   $passwordU=NULL;
   $nomeU=NULL;
-  $cognome=NULL;
+  $cognomeU=NULL;
   $fotoU=NULL;
   $cittaU=NULL;
   $sessoU=NULL;
   $descrizioneU=NULL;
+  //variabili per la modifica di user
+  $passwordN=NULL;
+  $nomeN=NULL;
+  $cognomeN=NULL;
+  $fotoN=NULL;
+  $cittaN=NULL;
+  $sessoN=NULL;
+  $descrizioneN=NULL;
   //messaggi
   $dataM=NULL;
   $testoM=NULL;
