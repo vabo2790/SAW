@@ -21,6 +21,19 @@
             <h5 class="ins_font2"><b>PASSWORD*</b></h5>
             <input type="password" name="password" id="password"><br>
 
+            <h5 class="ins_font2"><b>CITT&Agrave;</b></h5>
+            <input type="citta" name="citta" id="citta"><br>
+
+            <h1 class="ins_font2"><b>SESSO</b></h1>
+            <select name="sesso" id="sesso">
+                <option value="altro"></option>
+                <option value="maschio">maschio</option>
+                <option value="femmina">femmina</option>
+            </select>
+
+            <h1 class="ins_font2"><b>BREVE DESCRIZIONE DI SE</b></h1>
+            <textarea name="descrizione" rows="7" cols="60" id="descrizione"> </textarea><br>
+
             <h5 class="ins_font2"><b>IMMAGINE DI PROFILO</b></h5>
             <input type="file" name="foto" id="foto"><br>
 

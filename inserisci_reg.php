@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<?php
-=======
 
 <?php
-  require_once 'base.php';
-
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
-  $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
-  if (mysqli_connect_errno())
-    {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-
-  require_once 'variabili.php';
+  session_start();
+  require_once 'connessione_db.php';
 
   if(isset($_POST['username'])){
     $usernameU=addslashes($_POST['username']);
@@ -46,13 +35,17 @@
     $fotoU=addslashes($_POST['foto']);
   }
 
-  $query2 = "INSERT INTO user (mail, password, nome, cognome, username, citta, sesso, foto) VALUES ('$mailU', '$passwordU', '$nomeU', '$cognomeU', '$usernameU', '$cittaU', '$sessoU', '$fotoU')";
+  if(isset($_POST['descrizione'])){
+    $descrizioneU=addslashes($_POST['descrizione']);
+  }
 
-  //Inseriti i dati nel db stampo un messaggio di conferma che mi dica che il profilo è stato creato
-  //magari faccio il controllo con js
+  $query2 = "INSERT INTO user (mail, password, nome, cognome, username, citta, sesso, foto, descrizione) VALUES ('$mailU', '$passwordU', '$nomeU', '$cognomeU', '$usernameU', '$cittaU', '$sessoU', '$fotoU', '$descrizioneU')";
+
   if (mysqli_query($con, $query2)) {
-    echo "Profilo creato con successo";
+    $_SESSION["log"] = $usernameU;
+    header("location: home.php");
   } else {
+    header("location: registrati.php");
     echo "Controlla di aver inserito tutti i dati richiesti nei campi obbligatori. Altrimenti inserisci username o/e mail differenti, potrebberò essere già state usate da quelcun'altro. ";
   }
 

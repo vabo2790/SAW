@@ -15,27 +15,41 @@
     background-repeat: no-repeat;
     padding: 12px 160px 10px;
 }
-#profilepict{
-    position: absolute;
-    top: 20px;
-    left: 980px;
-}
+
 #login{
     position: absolute;
-    top: 20px;
-    left: 980px;
-<<<<<<< HEAD
-=======
+    top: -42px;
+    right: 10%;
+    width:50px;
+    height:60px
+    border: 40px;
+    padding: 60px;
+    border-radius: 5px;
+    outline: none;
+
 }
 #register{
     position: absolute;
-    top: 20px;
-    left: 990px;
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
+    top: -42px;
+    right: 5%;
+    width: 30%;
+    border: 40px;
+    padding: 60px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
 }
 .img{
     padding-left: 50px;
     padding-top: 25px;
+}
+.mess{
+  padding-left: 2%;
+}
+.imgSent{
+    padding-left: 2%;
+    padding-top: 2%;
+    position: relative;
 }
 .ins_dist1{
     margin-top: 50px;
@@ -44,6 +58,10 @@
 .ins_dist2{
     top: 50px;
     margin-left: 20px;
+}
+.dist{
+    padding-top:5%;
+    margin-left: 5%;
 }
 .ins_font1{
     color: red;
@@ -61,7 +79,7 @@
 }
 .search {
   width: 100%;
-  position: relative
+  position: relative;
 }
 .searchTerm {
     position: absolute;

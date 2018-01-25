@@ -1,22 +1,14 @@
 <?php
     require_once 'base.php';
 ?>
-<<<<<<< HEAD
 <!DOCTYPE>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="home.css"/>
     </head>
     <body>
-=======
-
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 <?php
-  $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
-  if (mysqli_connect_errno())
-    {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+  require_once 'connessione_db.php';
 
   // Controllo che la chiave sia stata settata
   if(isset($_POST['cerca'])){
@@ -25,7 +17,6 @@
   // Modifico la chiave di ricerca per cercare tutte le inserzioni che contengono la chiave cercata nel titolo
   $sk="%".$search."%";
 
-  require_once 'variabili.php';
 
   $query1=$con->prepare("SELECT * FROM sentieri WHERE nome LIKE ? or citta LIKE ? or regione LIKE ? or provincia LIKE ? or difficolta LIKE ? or stato_sentiero LIKE ?");
   $query1->bind_param('ssssss', $sk, $sk, $sk, $sk, $sk, $sk);
@@ -33,7 +24,7 @@
   // Salvo il risultato della query
   $query1->store_result();
   // Dico alla query dove mettere i risultati
-  $query1->bind_result($regioneU, $usernameU, $cittaS, $provinciaS, $longS, $latS, $indirizzoS, $statoS, $difficoltaS, $descrizioneS, $fotoS, $idS, $nomeS);
+  $query1->bind_result($regioneS, $usernameU, $cittaS, $provinciaS, $longS, $latS, $indirizzoS, $statoS, $difficoltaS, $descrizioneS, $fotoS, $idS, $nomeS);
   // Pulisco le variabili da caratteri strani
   $cittaS = stripslashes($cittaS);
   $regioneS = stripslashes($regioneS);
@@ -48,42 +39,36 @@
   }
 
   else{
-      echo "<h3>La ricerca ha prodotto ".$query1->num_rows()." risultati</h3>";
+    if($query1->num_rows()==1){
+        echo "<h3>La ricerca ha prodotto ".$query1->num_rows()." risultato per la parola: " .$search. "</h3>";
+    } else{
+      echo "<h3>La ricerca ha prodotto ".$query1->num_rows()." risultati per la parola: " .$search. "</h3>";
+    }
   }
-<<<<<<< HEAD
-     
+
+
+
   //Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
-        
+
   while ($query1->fetch()){
-      if($fotoS==NULL)
+    if($fotoS==NULL)
       {
-          echo '<div><img src="img2/foto_sentiero.jpg" style="width:200px;height:200px"/></div>';
+          echo '<div class="imgSent"><img src="img2/foto_sentiero.jpg" style="width:200px;height:200px"/>';
       }
       else
       {
-          echo '<div><img src="'.$fotoS.'" style="width:200px;height:200px"/></div>';
+          echo '<div class="imgSent"><img src="'.$fotoS.'" style="width:200px;height:200px"/>';
       }
-            echo '<span class="ricerca_layout">'.$nomeS.' di '.$usernameU.'</span>';
-            echo '<span>'.$cittaS.'/'.$provinciaS.'/'.$regioneS.'</span>';
-            echo '<span>'.$indirizzoS.'</span>';
-            echo '<span>'.$statoS.'-'.$difficoltaS.'</span>';
-            echo '<span style="color:red"><b>Esperienza dello utente</b></span>';
-            echo '<span style="font-size:14px">'.$descrizioneS.'</span>';
+      echo '<p>'.$nomeS.' di '.$usernameU.'<br>
+      '.$cittaS.'/'.$provinciaS.'/'.$regioneS.'<br>
+      '.$indirizzoS.'<br>
+      '.$statoS.'-'.$difficoltaS.'</p>
+      <p style="color:red"><b>Esperienza dell utente</b><br></p>
+      <p>'.$descrizioneS.'</p>
+      <form action="sentiero.php" method="post">
+        <input type="submit" name="mostra" id="mostra" href="sentiero.php" value="'.$idS.'">
+      </form></div>';
+//se trovi il modo di cambiare il valore del pulsante, cambialo, se no lasciamo l'id anche se è brutto
   }
-
+echo "</body></html>";
 ?>
-    </body>    
-</html>
-=======
-
-
-  // Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
-  while ($query1->fetch()){
-
-  //  <img src=".$fotoS" style="width:width;height:height;">
-
-  }
-
-
-?>
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec

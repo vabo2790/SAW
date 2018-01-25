@@ -1,13 +1,7 @@
 <?php
   session_start();
-  $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
-  if (mysqli_connect_errno())
-    {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
+  require_once 'connessione_db.php';
 
-  require_once 'variabili.php';
-  $login=0; //variabile booleana per verificare se ho fatto l'accesso
 
   if(isset($_POST['username'])){
     $usernameU=addslashes($_POST['username']);
@@ -29,9 +23,12 @@
   $passwordU = stripslashes($passwordU);
 
   if($query5->num_rows()==0){
+      require_once 'base.php';
+      unset($_SESSION["log"]);
       echo '<h3>Potresti aver inserito male i dati, <a href="accedi.php">riprova</a> o <a href="registrati.php">registrati</h3></a>';
   }
   else{
-    $_SESSION["log"] = 1;
-    require_once 'home.php';
+    $_SESSION["log"] = $usernameU;
+    header("location: home.php");
   }
+?>

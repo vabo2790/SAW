@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","S3942369","de2adc1d","S3942369");
+  $con=mysqli_connect("localhost","S39414178","a2n7d8","S39414178");
   if (mysqli_connect_errno())
     {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -29,15 +29,17 @@
   $fotoU=NULL;
   $cittaU=NULL;
   $sessoU=NULL;
+  $descrizioneU=NULL;
   //messaggi
   $dataM=NULL;
   $testoM=NULL;
+  $userR=NULL;
+  $userS=NULL;
   //rating
   $commentoR=NULL;
   $stelleR=NULL;
 
-  $query2="INSERT INTO user (mail, password, nome, cognome, username, città, sesso, foto)
-  VALUES ($mailU, $passwordU, $nomeU, $cognomeU, $usernameU, $cittaU, $sessoU, $fotoU)";
+
 
 
 ?>

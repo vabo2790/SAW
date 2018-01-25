@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYPE>
-=======
-<?php session_start(); ?>
 <!DOCTYPE html>
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
 <html>
     <head>
         <!--prima riga ci deve essere-->
@@ -18,40 +13,35 @@
         <title>Find My Mountain</title>
     </head>
     <body>
-            <a href="home.php"><img src="img/segn_verticale.png" style="widht:50px;height:60px"/></a>
-                    <div class="search">
-                      <form method="post" action="ricerca.php">
-                          <input type="text" class="searchTerm" placeholder="CERCA" name="cerca" id="cerca">
-                      </form>
-                    </div>
-<<<<<<< HEAD
-            <span id="profilepict">
-                <img src="img/profile-icon.png" style="widht:40px;height:43px"/>
+        <a href="home.php"><img src="img/segn_verticale.png" style="widht:50px;height:60px"/></a>
+        <div class="search">
+            <form method="post" action="ricerca.php">
+                <input type="text" class="searchTerm" placeholder="CERCA" name="cerca" id="cerca">
+            </form>
+        </div>
+
+
+        <?php
+          session_start();
+          if(isset($_SESSION["log"])){
+            echo
+            '<span id="login">
+                <a href="esci.php"><img src="img/esci.png" style="widht:80px;height:43px"/></a>
+            </span>';
+          }else {
+            echo
+            '<span id="register">
+              <a href="registrati.php"><img src="img/registrati.png" style="widht:80px;height:43px"/></a>
             </span>
             <span id="login">
-                <a href="registrati.php"><img src="img/registrati.png" style="widht:80px;height:43px"/></a>
-            </span>
-=======
-                  <?php
-                  if($_SESSION["log"] == 1){
-                  echo  '<span id="login">
-                      <a href="esci.php"><img src="img/esci.png" style="widht:80px;height:43px"/></a>
-                    </span>';
-                  }else {
-                    echo '<span id="register">
-                      <a href="registrati.php"><img src="img/registrati.png" style="widht:80px;height:43px"/></a>
-                    </span>
-                    <span id="login">
-                      <a href="accedi.php"><img src="img/accedi.png" style="widht:80px;height:43px"/></a>
-                    </span>';
-                  }
-                  ?>
->>>>>>> 5a3c02ca4110cf0507576af06258847d6ed95dec
+              <a href="accedi.php"><img src="img/accedi.png" style="widht:80px;height:43px"/></a>
+            </span>';
+          }
+        ?>
+
         <div class="btn-group btn-group-justified" style="top:20px">
             <a href="home.php" class="btn btn-danger">HOME</a>
-            <a href="inserzione.php" class="btn btn-danger">NUOVO SENTIERO</a>
-            <a href="profilo.php" class="btn btn-danger">PROFILO</a>
-            <a href="#" class="btn btn-danger">MESSAGGI</a>
+            <a href="nuovo_sentiero.php" class="btn btn-danger">NUOVO SENTIERO</a>
+            <a href="profilo_personale.php" class="btn btn-danger">PROFILO</a>
+            <a href="messaggi.php" class="btn btn-danger">MESSAGGI</a>
         </div>
-    </body>
-</html>
