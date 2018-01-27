@@ -3,7 +3,7 @@ session_start();
 require_once 'connessione_db.php';
 
   if(isset($_POST['passwordN'])){
-    $passwordN=addslashes($_POST['passwordN']);
+    $passwordN=md5(addslashes($_POST['passwordN']));
   }
 
   if(isset($_POST['nomeN'])){

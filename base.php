@@ -22,7 +22,10 @@
 
 
         <?php
+        if(session_id() == ''){
+          //session has not started
           session_start();
+        }
           if(isset($_SESSION["log"])){
             echo
             '<span id="login">

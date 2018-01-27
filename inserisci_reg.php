@@ -12,7 +12,7 @@
   }
 
   if(isset($_POST['password'])){
-    $passwordU=addslashes($_POST['password']);
+    $passwordU=md5(addslashes($_POST['password']));
   }
 
   if(isset($_POST['nome'])){

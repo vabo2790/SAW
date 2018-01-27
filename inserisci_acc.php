@@ -8,7 +8,7 @@
   }
 
   if(isset($_POST['password'])){
-    $passwordU=addslashes($_POST['password']);
+    $passwordU=md5(addslashes($_POST['password']));
   }
 
   $query5=$con->prepare("SELECT * FROM user WHERE username LIKE ? and password LIKE ?");
@@ -17,7 +17,7 @@
   // Salvo il risultato della query
   $query5->store_result();
   // Dico alla query dove mettere i risultati
-  $query5->bind_result($mailU, $passwordU, $nomeU, $cognomeU, $usernameU, $cittaU, $sessoU, $fotoU);
+  $query5->bind_result($mailU, $passwordU, $nomeU, $cognomeU, $usernameU, $cittaU, $sessoU, $fotoU, $descrizioneU);
   // Pulisco le variabili da caratteri strani
   $usernameU = stripslashes($usernameU);
 
