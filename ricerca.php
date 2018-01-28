@@ -66,7 +66,8 @@
       <p style="color:red"><b>Esperienza dell utente</b><br></p>
       <p>'.$descrizioneS.'</p>
       <form action="sentiero.php" method="post">
-        <input type="submit" name="mostra" id="mostra" href="sentiero.php" value="'.$idS.'">
+        <input type="hidden" name="mostra" id="mostra" value="'.$idS.'">
+        <input type="submit" value="Mostra sentiero">
       </form></div>';
 //se trovi il modo di cambiare il valore del pulsante, cambialo, se no lasciamo l'id anche se è brutto
   }

@@ -53,9 +53,11 @@
   //Inseriti i dati nel db stampo un messaggio di conferma che mi dica che il sentiero è stato inserito
   //magari faccio il controllo con js
   if (mysqli_query($con, $query3)) {
-    echo "Nuovo sentiero inserito";
+    require_once "base.php";
+    echo '<h1 class="imgSent">Nuovo sentiero inserito</h1>';
   } else {
-    echo "Controlla di aver inserito tutti i dati richiesti nei campi obbligatori";
+    require_once "base.php";
+    echo '<h1 class="imgSent">Controlla di aver inserito tutti i dati richiesti nei campi obbligatori</h1>';
   }
 
 
