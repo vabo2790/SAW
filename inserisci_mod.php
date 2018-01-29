@@ -3,7 +3,10 @@ session_start();
 require_once 'connessione_db.php';
 
   if(isset($_POST['passwordN'])){
-    $passwordN=md5(addslashes($_POST['passwordN']));
+    if ($_POST['passwordN'] != "")
+      $passwordN=md5(addslashes(trim($_POST['passwordN'])));
+    else
+      $passwordN=md5($_SESSION['pwd']);
   }
 
   if(isset($_POST['nomeN'])){
@@ -21,72 +24,38 @@ require_once 'connessione_db.php';
   if(isset($_POST['sessoN'])){
     $sessoN=addslashes($_POST['sessoN']);
   }
-  if(isset($_POST['fotoN'])){
-    $fotoN=addslashes($_POST['fotoN']);
-  }
 
   if(isset($_POST['descrizioneN'])){
-    $descrizioneN=addslashes($_POST['descrizioneN']);
-  }
-  if(isset($_POST['username'])){
-    $usernameU=addslashes($_POST['username']);
-  }
-  if(isset($_POST['mail'])){
-    $mailU=addslashes($_POST['mail']);
-  }
-  if(isset($_POST['password'])){
-    $passwordU=addslashes($_POST['password']);
-  }
-
-  if(isset($_POST['nome'])){
-    $nomeU=addslashes($_POST['nome']);
-  }
-
-  if(isset($_POST['cognome'])){
-    $cognomeU=addslashes($_POST['cognome']);
-  }
-
-  if(isset($_POST['citta'])){
-    $cittaU=addslashes($_POST['citta']);
+    $descrizioneN=trim(addslashes($_POST['descrizioneN']));
   }
 
   if(isset($_POST['sesso'])){
     $sessoU=addslashes($_POST['sesso']);
   }
 
-  if(isset($_POST['foto'])){
-    $fotoU=addslashes($_POST['foto']);
+/*  $target_dir = "Profilo/";
+  $newfoto = NULL;
+  $target_file = NULL;
+  echo "Errore : " .  $_FILES["fotoN"]["error"];
+  if($_FILES["fotoN"]["name"] != ""){
+    $newfoto = basename($_FILES["fotoN"]["name"]);
+    echo $newfoto;
+    $target_file = $target_dir.$fotoN;
   }
-
-  if(isset($_POST['descrizione'])){
-    $descrizioneU=addslashes($_POST['descrizione']);
-  }
-
-  if($passwordN==NULL){
-    $passwordN=$passwordU;
-  }
-  if($nomeN==NULL){
-    $nomeN=$nomeU;
-  }
-  if($cognomeN==NULL){
-    $cognomeN=$cognomeU;
-  }
-  if($cittaN==NULL){
-    $cittaN=$cittaU;
-  }
-  if($sessoN==NULL){
-    $sessoN=$sessoU;
-  }
-  if($fotoN==NULL){
-    $fotoN=$fotoU;
-  }
-  if($descrizioneN==NULL){
-    $descrizioneN=$descrizioneU;
-  }
+  else{
+    echo "sono nel ramo else<br>";
+    $newfoto= $fotoU;
+  } */
 
   $user=$_SESSION["log"];
-  $q10="UPDATE user SET password='".$passwordN."', nome='".$nomeN."', cognome='".$cognomeN."', citta='".$cittaN."', sesso='".$sessoN."', foto='".$fotoN."', descrizione='".$descrizioneN."' WHERE username = '".$user."'";
+  $q10="UPDATE user SET password='".$passwordN."', nome='".$nomeN."', cognome='".$cognomeN."', citta='".$cittaN."', sesso='".$sessoN."', descrizione='".$descrizioneN."' WHERE username = '".$user."'";
+//echo $q10;
   if (mysqli_query($con, $q10)) {
+    /* if( $target_file!=NULL ){
+      if (move_uploaded_file($_FILES["fotoN"]["tmp_name"], $target_file)) {
+        echo "The file ".basename( $_FILES["fotoN"]["name"])." has been uploaded in ".$target_file;
+      }
+    } */
     header("location: profilo_personale.php");
   }
-?>UPDATE user SET username='sara', password='sara', nome='Fede', cognome='Sale', citta='genova', descrizione='sono io' WHERE username = 'sara'
+?>

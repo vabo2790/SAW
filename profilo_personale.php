@@ -13,13 +13,35 @@
     $q4->fetch();
 
     if(isset($_SESSION["log"])){
-      echo '<h3> username:'.$usernameU.'</h3>';
-      echo '<h3> mail:'.$mailU.'</h3>';
-      echo '<h3> nome:'.$nomeU.'</h3>';
-      echo '<h3> cognome:'.$cognomeU.'</h3>';
-      echo '<form class="imgSent" action="modifica.php" method="post">
-              <input type="submit" name="modifica" id="modifica" value="Modifica">
-            </form>';
+      echo '<h3 class="imgSent">'.$usernameU.'</h3>';
+
+      echo '<div class="imgSent"><img src="Profilo/'.$fotoU.'" style="width:200px;height:200px"/><br>';
+      echo '<form class="imgSent" action="modifica_foto.php" method="post">
+      <input type="submit" name="modifica" id="modifica" value="Modifica foto"><br>
+      </form>';
+      echo '  <p class="mess"> Il tuo nome: '.$nomeU.'</p>
+        <p class="mess"> Il tuo cognome: '.$cognomeU.'</p>
+        <p class="mess"> La tua mail: '.$mailU.'</p>';
+      if($cittaU==NULL) {
+        echo '<p class="mess">Non hai inserito dati sulla tua città</p>';
+      }
+      else{
+        echo '<p class="mess"> La tua città: '.$cittaU.'</p>';
+      }if($sessoU=="altro") {
+        echo '<p class="mess">Non hai inserito dati sul tuo sesso</p>';
+      }
+      else{
+        echo '<p class="mess"> Il tuo sesso: '.$sessoU.'</p>';
+      }
+      if($descrizioneU==NULL) {
+        echo '<p class="mess">Non hai inserito una descrizione</p>';
+      }
+      else{
+        echo '<p class="mess"> Come ti descrivi: '.$descrizioneU.'</p>';
+      }
+        echo '<form class="imgSent" action="modifica.php" method="post">
+                <input type="submit" name="modifica" id="modifica" value="Modifica">
+        </form>';
     }
 
     else{

@@ -51,14 +51,7 @@
   //Finchè ci sono dati nel risultato della query continuo a stamparli (in pratica faccio un ciclo sulle righe della tabella risultante dalla query)
 
   while ($query1->fetch()){
-    if($fotoS==NULL)
-      {
-          echo '<div class="imgSent"><img src="img2/foto_sentiero.jpg" style="width:200px;height:200px"/>';
-      }
-      else
-      {
-          echo '<div class="imgSent"><img src="'.$fotoS.'" style="width:200px;height:200px"/>';
-      }
+      echo '<div class="imgSent"><img src="Sentiero/'.$fotoS.'" style="width:200px;height:200px"/>';
       echo '<p>'.$nomeS.' di '.$usernameU.'<br>
       '.$cittaS.'/'.$provinciaS.'/'.$regioneS.'<br>
       '.$indirizzoS.'<br>

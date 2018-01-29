@@ -14,15 +14,9 @@ $query6->store_result();
 // Dico alla query dove mettere i risultati
 $query6->bind_result($regioneU, $usernameU, $cittaS, $provinciaS, $longS, $latS, $indirizzoS, $statoS, $difficoltaS, $descrizioneS, $fotoS, $idS, $nomeS);
 $query6->fetch();
-echo '<h3 class="imgSent">'.$nomeS.'</h3><br>';
-    if($fotoS==NULL)
-    {
-        echo '<span class="imgSent"><img src="img2/foto_sentiero.jpg" style="width:200px;height:200px"/>';
-    }
-    else
-    {
-        echo '<span class="imgSent"><img src="'.$fotoS.'" style="width:200px;height:200px"/>';
-    }
+    echo '<h3 class="imgSent">'.$nomeS.'</h3><br>';
+
+    echo '<span class="imgSent"><img src="Sentiero/'.$fotoS.'" style="width:200px;height:200px"/>';
     echo'<p class="mess">'.$cittaS.'/'.$provinciaS.'/'.$regioneS.'<br>
     '.$indirizzoS.'<br>
     '.$statoS.'-'.$difficoltaS.'</p>

@@ -8,7 +8,8 @@
   }
 
   if(isset($_POST['password'])){
-    $passwordU=md5(addslashes($_POST['password']));
+    $pwd=trim($_POST['password']);
+    $passwordU=md5(addslashes(trim($_POST['password'])));
   }
 
   $query5=$con->prepare("SELECT * FROM user WHERE username LIKE ? and password LIKE ?");
@@ -28,6 +29,7 @@
   }
   else{
     $_SESSION["log"] = $usernameU;
+    $_SESSION["pwd"] = $pwd;
     header("location: home.php");
   }
 ?>

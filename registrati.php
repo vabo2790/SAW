@@ -35,11 +35,12 @@
             <textarea name="descrizione" rows="7" cols="60" id="descrizione"> </textarea><br>
 
             <h5 class="ins_font2"><b>IMMAGINE DI PROFILO</b></h5>
-            <input type="file" name="foto" id="foto"><br>
+            <input type="file" accept="image/*" name="fotoProfilo" id="fotoProfilo"><br>
+            <img id="foto" src="img2/foto_user.png" style="width:200px;height:200px"/><br />
 
             <input type="submit" value="INVIA"><br>
 
-            <p>
+            <p style="color:red">
               I campi contrassegnati con * sono campi obbligatori
             </p>
 

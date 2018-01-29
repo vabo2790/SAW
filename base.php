@@ -9,11 +9,10 @@
          <!--chiamo css-->
         <link rel="stylesheet" type="text/css" href="home.css"/>
          <!--chiamo javasacript-->
-        <script src="home.js"></script>
         <title>Find My Mountain</title>
     </head>
     <body>
-        <a href="home.php"><img src="img/segn_verticale.png" style="widht:50px;height:60px"/></a>
+        <a href="index.php"><img src="img/segn_verticale.png" style="widht:50px;height:60px"/></a>
         <div class="search">
             <form method="post" action="ricerca.php">
                 <input type="text" class="searchTerm" placeholder="CERCA" name="cerca" id="cerca">

@@ -38,13 +38,15 @@ if(isset($_SESSION["log"])){
       </select>
 
       <h1 class="ins_font2"><b>IMMAGINE DEL SENTIERO</b></h1>
-      <input type="file" name="foto" id="foto"><br>
+      <input type="file" accept="image/*" name="foto" id="foto"><br>
+      <img id="fotoS" src="img2/foto_sentiero.jpg"/><br />
+
 
       <h1 class="ins_font2"><b>BREVE DESCRIZIONE*</b></h1>
       <textarea name="descrizione" rows="7" cols="60" id="descrizione"> </textarea><br>
 
       <input type="submit" value="INVIA"><br>
-      <p>I campi contrassegnati con * sono campi obbligatori</p>
+      <p style="color:red">I campi contrassegnati con * sono campi obbligatori</p>
     </form>';
 }else{
   echo '<h3> Non sei connesso al tuo account, <a href="accedi.php">accedi</a> o <a href="registrati.php">registrati</h3></a>';
