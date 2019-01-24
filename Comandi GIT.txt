@@ -10,5 +10,11 @@ git add *						//Aggiunge tutti i files contenuti nella cartella corrente e nell
 git commit -m "Inserisci qui il messaggio"		//Esegue il commit ed aggiunge un messaggio
 git push						//Manda i dati alla repository
 
-Per scaricare cu pc gli aggiornamenti della repository, cioË per scaricare files nuovi e aggiornare quelli gi‡ presenti, bisogna usare:
+Per scaricare cu pc gli aggiornamenti della repository, cio√® per scaricare files nuovi e aggiornare quelli gi√† presenti, bisogna usare:
 git pull
+
+Per leggere la lista dei branch esistenti in un determinato repository:
+git branch -a
+
+Per cambiare branch:
+git checkout <nome_branch>
